@@ -1,0 +1,82 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #29166E;
+  background-color: #F8F8F8;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 { font-size: 8.4rem; line-height: 1.1; }
+h3 { font-size: 3rem; }
+h4 { font-size: 2.4rem; }
+p { font-size: 1.8rem; }
+.smallText { font-size: 1.3rem; }
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: rgba(248, 248, 248, .9);
+  padding: 1.8rem; 
+  text-align: center;
+  width: 100%;
+  transform-origin: center top;
+  transition: transform ease;
+  z-index: 100;
+  #navbarLogo { width: 50%; min-width: 250px; max-width: 375px; transform-origin: center top; }
+}
+#navContent {
+  padding: 0 1.8rem;
+  text-align: center;
+  h4 { text-wrap: pretty; }
+  a { margin: 0 auto; display: flex; width: fit-content; align-items: center; }
+}
+footer { text-align: center; padding: 0 1.8rem 1.8rem 1.8rem; }
+
+a { font-size: 1.8rem; font-weight: 500; color: #C3251D; text-decoration: inherit; }
+@media (hover: hover) { a:hover { text-decoration: underline; } }
+a:active { filter: brightness(110%); }
+
+button {
+  color: #F8F8F8;
+  font-size: 1.8rem;
+  border-radius: 15px;
+  border: none;
+  padding: 1rem 1.5em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #C3251D;
+  cursor: pointer;
+  transition: box-shadow .15s, filter .15s;
+}
+@media (hover: hover) { button:hover { box-shadow: 0 0 15px rgba(195, 37, 29, .5); } }
+button:active { box-shadow: 0 0 15px rgba(195, 37, 29, .8); filter: brightness(105%); }
+
+.inlineIcon { width: 1.8rem; margin-right: 1rem; user-select: none; }
+
+*::-webkit-scrollbar { width: 11px; }
+  
+*::-webkit-scrollbar-track { background: #F8F8F8; }
+  
+*::-webkit-scrollbar-thumb { background: #C0C0C0; border-radius: 15px; border: 3px solid #F8F8F8; }
