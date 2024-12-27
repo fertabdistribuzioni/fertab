@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 
 function handleRedirection(link) {
     window.open(link, '_blank');
@@ -12,12 +13,12 @@ function ProductCard({ productImg, productName, productDescription, productPrice
     const checkIfTextIsLong = () => {
         if (descriptionRef.current) {
             const isLong = descriptionRef.current.scrollHeight > descriptionRef.current.clientHeight;
-            setIsTextLong(isLong);  // Imposta lo stato se il testo è lungo
+            setIsTextLong(isLong);
         }
     };
 
     useEffect(() => {
-        checkIfTextIsLong();  // Verifica se il testo è lungo al caricamento del componente
+        checkIfTextIsLong();
     }, [productDescription]);
 
     const toggleDescription = () => {
@@ -32,15 +33,15 @@ function ProductCard({ productImg, productName, productDescription, productPrice
 
     return (
         <div className={`prodCard ${isExpanded ? 'expanded' : ''}`}>
-            <img src={productImg} alt="Immagine prodotto" onClick={handleImageClick} />
+            <img src={productImg} loading="lazy" alt="Immagine prodotto" onClick={handleImageClick} />
             <div className="prodBody">
                 <div className="prodInfo">
                     <h4>{productName}</h4>
                     <p className='prodDescription' ref={descriptionRef}>{productDescription}</p>
                 </div>
                 <div className="prodBottom">
-                    {isTextLong && !isExpanded && ( <a onClick={toggleDescription}>Mostra più</a> )}
-                    {isExpanded && ( <a onClick={toggleDescription}> Mostra meno </a> )}
+                    {isTextLong && !isExpanded && ( <button className="textButton" onClick={toggleDescription}>Mostra più</button> )}
+                    {isExpanded && ( <button className="textButton" onClick={toggleDescription}>Mostra meno</button> )}
                     <div className="prodBuy">
                         <div className="prodBuyInfo">
                             <h4>{productPrice}€</h4>
@@ -52,6 +53,15 @@ function ProductCard({ productImg, productName, productDescription, productPrice
             </div>
         </div>
     );
+}
+
+ProductCard.propTypes = {
+    productImg: PropTypes.string.isRequired,
+    productName: PropTypes.string.isRequired,
+    productDescription: PropTypes.string.isRequired,
+    productPrice: PropTypes.string.isRequired,
+    productAmount: PropTypes.string.isRequired,
+    prodLink: PropTypes.string.isRequired,
 }
 
 export default ProductCard

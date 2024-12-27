@@ -5,8 +5,8 @@
   #searchBarButton {
     position: absolute;
     right: 1.3rem;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 51%;
+    transform: translateY(-51%);
     cursor: pointer;
     img { width: 1.8rem; }
   }
@@ -43,9 +43,9 @@
   }
   .prodBody {
     flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     max-height: 215px;
     .prodInfo {
       padding-top: 1.8rem;
@@ -66,12 +66,14 @@
       .prodDescription { padding: 0 1.8rem; }
     }
     .prodBottom {
-      position: absolute; /* Fissa la posizione in basso */
-  bottom: 1.8rem;
-  width: 250px;
+      background-color: #ECECEC;
+      z-index: 2;
+      position: absolute;
+      bottom: 1.8rem;
+      width: 250px;
       height: min-content;
       padding: 0 1.8rem 0 1.8rem;
-      a { display: inline-block; padding-bottom: 1.8rem; user-select: none; }
+      .textButton { margin-bottom: 1.8rem; user-select: none; }
       .prodBuy {
         display: flex; gap: 1.8rem; align-items: center;
         button { flex: 1; }
@@ -86,7 +88,7 @@
   }
 }
 .prodCard.expanded {
-  img { filter: brightness(.95); }
+  img { filter: brightness(.9); }
   .prodInfo {
     transform: translateY(-50%);
     line-clamp: unset;

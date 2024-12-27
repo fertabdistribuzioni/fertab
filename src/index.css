@@ -3,19 +3,28 @@
   font-size: 10px;
 
   color-scheme: light;
-  color: #29166E;
-  background-color: #F8F8F8;
+  background-color: var(--bgColor);
+  color: var(--textColor);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --bgColor: #F8F8F8;
+  --textColor: #29166E;
+  --primaryColor: #C3251D;
+  --navbarColor: rgba(248, 248, 248, .9);
+  --buttonShadow_hover: rgba(195, 37, 29, .5);
+  --buttonShadow_active: rgba(195, 37, 29, .8);
+  --placeholderColor: #A9A9AC;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #root {
@@ -23,7 +32,7 @@
   display: flex;
   flex-direction: column;
 }
-::selection { background-color: #C3251D; color: #F8F8F8; }
+::selection { background-color: var(--primaryColor); color: var(--bgColor); }
 
 h1 { font-size: 8.4rem; line-height: 1.1; }
 h3 { font-size: 3rem; }
@@ -34,7 +43,7 @@ p { font-size: 1.8rem; line-height: 1.4; }
 nav {
   position: sticky;
   top: 0;
-  background-color: rgba(248, 248, 248, .9);
+  background-color: var(--navbarColor);
   padding: 1.8rem; 
   text-align: center;
   width: 100%;
@@ -46,28 +55,43 @@ nav {
 #navContent {
   padding: 0 1.8rem;
   text-align: center;
-  a { margin: 0 auto; display: block; }
+  h4 { margin-bottom: 1rem; }
+  a { margin: 0 auto .5rem auto; display: block; width: fit-content; }
 }
 footer { margin-top: auto; text-align: center; padding: 0 1.8rem 1.8rem 1.8rem; }
 
-a { font-size: 1.8rem; font-weight: 500; color: #C3251D; cursor: pointer; text-decoration: inherit; }
-@media (hover: hover) { a:hover { text-decoration: underline; } }
-a:active { filter: brightness(110%); }
-
 button {
-  color: #F8F8F8;
+  color: var(--bgColor);
   font-size: 1.8rem;
   border-radius: 15px;
   border: none;
   padding: 1rem 1.5em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #C3251D;
+  background-color: var(--primaryColor);
   cursor: pointer;
   transition: box-shadow .15s, filter .15s;
 }
-@media (hover: hover) { button:hover, button:focus { outline: none; border: none; box-shadow: 0 0 15px rgba(195, 37, 29, .5); } }
-button:active { box-shadow: 0 0 15px rgba(195, 37, 29, .8); filter: brightness(105%); }
+@media (hover: hover) { button:hover { outline: none; border: none; box-shadow: 0 0 15px var(--buttonShadow_hover); } }
+@media (focus: focus) { button:focus { outline: none; border: none; box-shadow: 0 0 15px var(--buttonShadow_hover); } }
+button:active { box-shadow: 0 0 15px var(--buttonShadow_active); filter: brightness(105%); }
+
+.textButton {
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  height: max-content;
+  width: max-content;
+  color: var(--primaryColor);
+  text-decoration: inherit;
+}
+@media (hover: hover) { .textButton:hover { box-shadow: none; text-decoration: underline; } }
+@media (focus: focus) { .textButton:focus { box-shadow: none; text-decoration: underline; } }
+.textButton:active { box-shadow: none; filter: brightness(110%); }
+
+a { font-size: 1.8rem; font-weight: 500; color: var(--primaryColor); cursor: pointer; text-decoration: inherit; }
+@media (hover: hover) { a:hover { text-decoration: underline; } }
+a:active { filter: brightness(110%); }
 
 input {
   font-size: 1.6rem;
@@ -76,15 +100,15 @@ input {
   border-radius: 15px;
   padding: 10px;
   padding-right: 40px;
-  border: 3px #29166E solid;
+  border: 3px var(--textColor) solid;
 }
-input::placeholder { color: #A9A9AC; }
-input:focus { outline: none; border: 3px #C3251D solid; }
+input::placeholder { color: var(--placeholderColor); }
+input:focus { outline: none; border: 3px var(--primaryColor) solid; }
 
 .inlineIcon { margin-bottom: .5rem; vertical-align: middle; width: 1.8rem; margin-right: 1rem; user-select: none; }
 
 *::-webkit-scrollbar { width: 11px; }
   
-*::-webkit-scrollbar-track { background: #F8F8F8; }
+*::-webkit-scrollbar-track { background: var(--bgColor); }
   
-*::-webkit-scrollbar-thumb { background: #C0C0C0; border-radius: 15px; border: 3px solid #F8F8F8; }
+*::-webkit-scrollbar-thumb { background: var(--placeholderColor); border-radius: 15px; border: 3px solid var(--bgColor); }

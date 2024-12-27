@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import logo from "../assets/logo/FTD_logoBig.svg";
 import callIcon from "../assets/callIcon.svg";
 import locationIcon from "../assets/locationIcon.svg";

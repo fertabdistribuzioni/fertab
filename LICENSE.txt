@@ -1,0 +1,13 @@
+Licenza Proprietaria per fertab-website
+
+Copyright (c) 2024 Emanuele Ciotola. Tutti i diritti riservati.
+
+1. Concessioni d'uso: L'utente ha il diritto di utilizzare il software esclusivamente per scopi non commerciali e all'interno dei limiti stabiliti in questo contratto.
+
+2. Restrizioni: L'utente non è autorizzato a copiare, distribuire, vendere, modificare o creare opere derivate del software senza il permesso esplicito del proprietario.
+
+3. Durata: Questa licenza è valida per [un periodo specifico] o fino a quando il proprietario non revoca la licenza.
+
+4. Violazione della licenza: In caso di violazione di uno qualsiasi dei termini di questa licenza, il proprietario si riserva il diritto di revocare immediatamente i diritti concessi e intraprendere azioni legali per difendere i suoi diritti di proprietà.
+
+5. Limitazione di responsabilità: Il software è fornito "così com'è", senza garanzie di alcun tipo, esplicite o implicite, comprese ma non limitate a garanzie di commerciabilità o idoneità per uno scopo particolare.

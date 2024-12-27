@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"; // Aggiungi useRef
+import { useState, useEffect, useRef } from "react"; // Aggiungi useRef
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase_config";
 import "./App.css";
@@ -49,7 +49,7 @@ function App() {
         <div id="searchBar">
           <input ref={inputRef} type="text" name="searchTerm" placeholder="Cerca prodotto..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
           <div id="searchBarButton" onClick={searchTerm ? handleClearSearch : handleFocusInput}>
-            <img src={searchTerm ? closeIcon : searchIcon} alt="" />
+            <img src={searchTerm ? closeIcon : searchIcon} alt={searchTerm ? "Cancella" : "Cerca"} />
           </div>
         </div>
         <div id="productList">

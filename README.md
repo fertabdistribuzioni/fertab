@@ -1,8 +1,24 @@
-# React + Vite
+# Fertab Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Versione 1.0.0
 
-Currently, two official plugins are available:
+## Licenza
+Questo progetto è protetto da una licenza proprietaria. Tutti i diritti riservati.
+Non è consentito copiare, distribuire, modificare o utilizzare il codice senza il permesso esplicito dell'autore.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Descrizione
+Fertab-website è un'applicazione web sviluppata per la presentazione e la vendita dei prodotti Fertab. Il sito è realizzato con **React**, utilizzando tecnologie moderne per garantire una buona esperienza utente e performance ottimizzate.
+
+### Funzionalità
+- Visualizzazione dei prodotti in modo intuitivo.
+- Interfaccia responsiva e ottimizzata per dispositivi mobili.
+- Collegamenti diretti alle pagine Amazon per l'acquisto dei prodotti.
+
+### Tecnologie
+- **React**: per la costruzione dell'interfaccia utente.
+- **Firebase**: per la gestione dei dati e dell'autenticazione.
+- **CSS3**: per lo stile e la responsività.
+- **Vite**: per il bundling e la gestione dello sviluppo.
+
+### Contatti
+Per domande o richieste, contatta l'autore all'indirizzo email: ema.ciotola.dev@gmail.com.

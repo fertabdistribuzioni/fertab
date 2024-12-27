@@ -1,7 +1,7 @@
 {
-  "name": "provareact",
+  "name": "fertab-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "homepage": "http://emanueleciotola.github.io/Test/",
   "scripts": {
@@ -15,14 +15,12 @@
   "dependencies": {
     "@fontsource/roboto": "^5.1.0",
     "firebase": "^11.1.0",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.4.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.15.0",
     "eslint-plugin-react": "^7.37.2",
