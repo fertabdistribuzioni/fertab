@@ -1,8 +1,6 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 10px;
-  line-height: 1.5;
-  font-weight: 400;
 
   color-scheme: light;
   color: #29166E;
@@ -18,20 +16,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
 }
 
 #root {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
+::selection { background-color: #C3251D; color: #F8F8F8; }
 
 h1 { font-size: 8.4rem; line-height: 1.1; }
 h3 { font-size: 3rem; }
-h4 { font-size: 2.4rem; }
-p { font-size: 1.8rem; }
+h4 { font-size: 2.4rem; line-height: 1.2; }
+p { font-size: 1.8rem; line-height: 1.4; }
 .smallText { font-size: 1.3rem; }
 
 nav {
@@ -49,12 +46,11 @@ nav {
 #navContent {
   padding: 0 1.8rem;
   text-align: center;
-  h4 { text-wrap: pretty; }
-  a { margin: 0 auto; display: flex; width: fit-content; align-items: center; }
+  a { margin: 0 auto; display: block; }
 }
-footer { text-align: center; padding: 0 1.8rem 1.8rem 1.8rem; }
+footer { margin-top: auto; text-align: center; padding: 0 1.8rem 1.8rem 1.8rem; }
 
-a { font-size: 1.8rem; font-weight: 500; color: #C3251D; text-decoration: inherit; }
+a { font-size: 1.8rem; font-weight: 500; color: #C3251D; cursor: pointer; text-decoration: inherit; }
 @media (hover: hover) { a:hover { text-decoration: underline; } }
 a:active { filter: brightness(110%); }
 
@@ -70,10 +66,22 @@ button {
   cursor: pointer;
   transition: box-shadow .15s, filter .15s;
 }
-@media (hover: hover) { button:hover { box-shadow: 0 0 15px rgba(195, 37, 29, .5); } }
+@media (hover: hover) { button:hover, button:focus { outline: none; border: none; box-shadow: 0 0 15px rgba(195, 37, 29, .5); } }
 button:active { box-shadow: 0 0 15px rgba(195, 37, 29, .8); filter: brightness(105%); }
 
-.inlineIcon { width: 1.8rem; margin-right: 1rem; user-select: none; }
+input {
+  font-size: 1.6rem;
+  width: 100%;
+  height: 50px;
+  border-radius: 15px;
+  padding: 10px;
+  padding-right: 40px;
+  border: 3px #29166E solid;
+}
+input::placeholder { color: #A9A9AC; }
+input:focus { outline: none; border: 3px #C3251D solid; }
+
+.inlineIcon { margin-bottom: .5rem; vertical-align: middle; width: 1.8rem; margin-right: 1rem; user-select: none; }
 
 *::-webkit-scrollbar { width: 11px; }
   

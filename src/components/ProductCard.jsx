@@ -33,21 +33,25 @@ function ProductCard({ productImg, productName, productDescription, productPrice
     return (
         <div className={`prodCard ${isExpanded ? 'expanded' : ''}`}>
             <img src={productImg} alt="Immagine prodotto" onClick={handleImageClick} />
-            <div className="prodInfo">
-                <h3>{productName}</h3>
-                <p className='prodDescription' ref={descriptionRef}>{productDescription}</p>
-                {isTextLong && !isExpanded && ( <a onClick={toggleDescription}>Mostra più</a> )}
-                {isExpanded && ( <a onClick={toggleDescription}> Mostra meno </a> )}
-                <div className="prodBuy">
-                    <div className="prodBuyInfo">
-                        <h4>{productPrice}</h4>
-                        <p className="smallText">{productAmount}</p>
+            <div className="prodBody">
+                <div className="prodInfo">
+                    <h4>{productName}</h4>
+                    <p className='prodDescription' ref={descriptionRef}>{productDescription}</p>
+                </div>
+                <div className="prodBottom">
+                    {isTextLong && !isExpanded && ( <a onClick={toggleDescription}>Mostra più</a> )}
+                    {isExpanded && ( <a onClick={toggleDescription}> Mostra meno </a> )}
+                    <div className="prodBuy">
+                        <div className="prodBuyInfo">
+                            <h4>{productPrice}€</h4>
+                            {productAmount === "1" ? "Al pezzo" : `${productAmount} pezzi`}
+                        </div>
+                        <button onClick={() => handleRedirection(prodLink)}>Acquista</button>
                     </div>
-                    <button onClick={() => handleRedirection(prodLink)}>Acquista</button>
                 </div>
             </div>
         </div>
     );
 }
 
-export default ProductCard;
+export default ProductCard

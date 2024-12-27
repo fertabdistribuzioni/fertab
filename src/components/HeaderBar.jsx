@@ -21,16 +21,16 @@ function HeaderBar() {
                 <img id="navbarLogo" src={logo} alt="Logo" style={{ transform: `scaleX(${scaleRatio})` }} />
             </nav>
             <div id="navContent">
-                <h4>Ingrosso articoli di ferramenta e tabaccherie</h4>
+                <h4>Ingrosso&nbsp;articoli di&nbsp;ferramenta e&nbsp;tabaccherie</h4>
                 <a href="https://maps.app.goo.gl/H4DNaxgzrRN724LC7" target="_blank" rel="noopener noreferrer">
                     <img className="inlineIcon" src={locationIcon} alt="Ci trovi in:" />
-                    C.so Garibaldi n.168, Portici (Na)
+                    C.so&nbsp;Garibaldi&nbsp;n.168, Portici&nbsp;(Na)
                 </a>
                 <a href="tel:0810487003">
                     <img className="inlineIcon" src={callIcon} alt="Chiama al:" />
                     0810487003
                 </a>
-                <p>Orario apertura: Lun/Ven 08:30/19:00 - Sab 08:30/12:00</p>
+                <p>Orario&nbsp;apertura:&nbsp;Lun/Ven 08:30/19:00&nbsp;-&nbsp;Sab&nbsp;08:30/12:00</p>
             </div>
         </>
     );
