@@ -94,7 +94,9 @@ a { font-size: 1.8rem; font-weight: 500; color: var(--primaryColor); cursor: poi
 a:active { filter: brightness(110%); }
 
 input {
-  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 1.8rem;
   width: 100%;
   height: 50px;
   border-radius: 15px;
