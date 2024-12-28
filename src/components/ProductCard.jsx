@@ -19,7 +19,7 @@ function ProductCard({ productImg, productName, productDescription, productPrice
 
     useEffect(() => {
         checkIfTextIsLong();
-    }, [productDescription]);
+    }, [productName, productDescription]);
 
     const toggleDescription = () => {
         setIsExpanded(!isExpanded);
