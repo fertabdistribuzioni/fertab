@@ -65,7 +65,7 @@ button {
   font-size: 1.8rem;
   border-radius: 15px;
   border: none;
-  padding: 1rem 1.5em;
+  padding: 1rem;
   font-weight: 500;
   font-family: inherit;
   background-color: var(--primaryColor);
