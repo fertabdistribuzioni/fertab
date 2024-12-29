@@ -50,7 +50,14 @@ nav {
   transform-origin: center top;
   transition: transform ease;
   z-index: 100;
-  #navbarLogo { width: 50%; min-width: 250px; max-width: 375px; transform-origin: center top; }
+  will-change: transform;
+  #navbarLogo {
+    width: 50%;
+    min-width: 250px;
+    max-width: 375px;
+    transform-origin: center top;
+    will-change: transform;
+  }
 }
 #navContent {
   padding: 0 1.8rem;
