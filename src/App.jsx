@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"; // Aggiungi useRef
+import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase_config";
 import "./App.css";
@@ -6,14 +6,13 @@ import HeaderBar from "./components/HeaderBar.jsx";
 import LoadingEffect from "./components/LoadingEffect.jsx";
 import ProductCard from "./components/ProductCard.jsx";
 import FooterBar from "./components/FooterBar.jsx";
-import closeIcon from "./assets/closeIcon.svg"
-import searchIcon from "./assets/searchIcon.svg"
+import SearchBar from "./components/SearchBar.jsx";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
-  const inputRef = useRef(null);
+
   useEffect(() => {
     const fetchProducts = async () => {
       setLoading(true);
@@ -32,28 +31,15 @@ function App() {
       product.productDescription.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const handleClearSearch = () => {
-    setSearchTerm("");
-  };
-
-  const handleFocusInput = () => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  };
-
   return (
     <>
       <HeaderBar />
       <div id="products">
-        <div id="searchBar">
-          <input ref={inputRef} type="text" name="searchTerm" placeholder="Cerca prodotto..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-          <div id="searchBarButton" onClick={searchTerm ? handleClearSearch : handleFocusInput}>
-            <img src={searchTerm ? closeIcon : searchIcon} alt={searchTerm ? "Cancella" : "Cerca"} />
-          </div>
-        </div>
+        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <div id="productList">
-          {loading ? ( <LoadingEffect /> ) : (
+          {loading ? (
+            <LoadingEffect />
+          ) : (
             filteredProducts.map((product, index) => (
               <ProductCard
                 key={index}
