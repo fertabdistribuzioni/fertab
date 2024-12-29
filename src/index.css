@@ -18,6 +18,9 @@
   --buttonShadow_hover: rgba(195, 37, 29, .5);
   --buttonShadow_active: rgba(195, 37, 29, .8);
   --placeholderColor: #A9A9AC;
+  --cardTransparentColor: rgba(191, 191, 191, .2);
+  --cardSolidColor: #ECECEC;
+  --boxShadowColor: rgba(0, 0, 0, .2);
 }
 
 * {

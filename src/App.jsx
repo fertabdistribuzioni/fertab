@@ -39,7 +39,7 @@ function App() {
         <div id="productList">
           {loading ? (
             <LoadingEffect />
-          ) : (
+          ) : filteredProducts.length > 0 ? (
             filteredProducts.map((product, index) => (
               <ProductCard
                 key={index}
@@ -51,6 +51,8 @@ function App() {
                 prodLink={product.prodLink}
               />
             ))
+          ) : (
+            <p>Nessun prodotto trovato per &quot;{searchTerm}&quot;.</p>
           )}
         </div>
       </div>

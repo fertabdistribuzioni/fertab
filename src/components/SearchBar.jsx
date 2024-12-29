@@ -19,9 +19,9 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
 
   return (
     <div id="searchBar">
-      <input ref={inputRef} type="text" name="searchTerm" placeholder="Cerca prodotto..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+      <input ref={inputRef} type="text" name="searchTerm" placeholder="Cerca prodotto..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} autoComplete="off" />
       <div id="searchBarButton" onClick={searchTerm ? handleClearSearch : handleFocusInput}>
-        <img src={searchTerm ? closeIcon : searchIcon} alt={searchTerm ? "Cancella" : "Cerca"} />
+        <img src={searchTerm ? closeIcon : searchIcon} alt={searchTerm ? "Cancella" : "Cerca"} draggable="false" />
       </div>
     </div>
   );
@@ -29,7 +29,7 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
 
 SearchBar.propTypes = {
     searchTerm: PropTypes.string.isRequired,
-    setSearchTerm: PropTypes.string.isRequired,
+    setSearchTerm: PropTypes.func.isRequired,
 }
 
 export default SearchBar
