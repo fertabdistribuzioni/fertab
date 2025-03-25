@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.5.0",
   "type": "module",
-  "homepage": "https://fertabdistribuzioni.github.io/fertab/",
+  "homepage": "https://fertabdistribuzioni.github.io/fertab",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
